@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="pizza.css" />
+    <script src="pizza.js"></script>
+</head>
+
+<body>
+    <form name="form1" id="form1" onsubmit="return isEmpty()">
+        <div class="name">Name :
+            <input type="text" id="name"  placeholder="Enter Name" required>
+        </div>
+
+        <div class="email">Email :
+            <input type="text" id="email" placeholder="Enter Email" >
+        </div>
+
+        <div class="Toppings">
+            <h4>Toppings :</h4>
+
+            Extra cheese
+            <input type="checkbox" id="ExtraCheese" value="Extra cheese"> 
+            Pepperoni
+            <input type="checkbox" id="Pepperoni" value="Pepperoni">
+            Olives
+            <input type="checkbox" id="Olives" value="Olives"> 
+            Pepper
+            <input type="checkbox" id="Pepper" value="Pepper"> 
+            Bacon
+            <input type="checkbox" id="Bacon" value="Bacon"> 
+            Tomatoes
+            <input type="checkbox" id="Tomatoes" value="Tomatoes">
+            Mushrooms
+            <input type="checkbox" id="Mushrooms" value="Mushrooms">
+        </div>
+
+        <div>
+
+            <b>How do you want to get your pizza?</b>
+
+            Delivery
+            <input type="radio" name="delivery" id="delivery" value="Delivery"> 
+            Pickup
+            <input type="radio" name="delivery" id="pickup" value="Pickup">
+
+        </div>
+
+        <div>
+            <b>Tip=</b>
+
+            <select name="" id="tip">
+
+                <option value="15">15%</option>
+                <option value="20">20%</option>
+                <option value="25">25%</option>
+
+
+            </select>
+            
+
+        </div>
+
+        <div class="Address">
+
+            <p>
+                <b style="margin: 0px">Address </b>
+            </p>
+            <textarea id="AddressText" required>
+
+            </textarea>
+            <br>
+        </div>
+        <div class="ActionButtons">
+            <input id="submitbutton" type="submit" value="Submit">
+            <input type="reset" value="Reset">
+            <input type="button" onclick="showtable()" value="Show Summary">
+
+        </div>
+        <h1>Pizza Order Summary:</h1>
+        <table id="summary_table">
+            <tr>
+                <td>Name</td>
+                <td id="Name"></td>
+                </tr>
+                <tr>
+                <td>Email</td>
+                <td id="Email"></td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td id="Address"></td>
+            </tr>
+            <tr>
+                <td>Toppings</td>
+                <td id="Toppings"></td>
+            </tr>
+            <tr>
+                <td>Delivery</td>
+                <td id="Delivery"></td>
+            </tr>
+            <tr>
+                <td>Tip Amount</td>
+                <td id="Tip"></td>
+            </tr>
+            <tr>
+                <td>Total</td>
+                <td id="Total"></td>
+            </tr>
+
+        </table>
+
+
+    </form>
+</body>
+
+</html>
